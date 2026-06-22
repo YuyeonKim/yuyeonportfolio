@@ -1,267 +1,425 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yuyeon Kim</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="bg-orbs" aria-hidden="true">
-  <span class="orb orb-pink"></span>
-  <span class="orb orb-green"></span>
-  <span class="orb orb-blue"></span>
-</div>
-
-<!-- ============ HOME SCREEN ============ -->
-<section id="screen-home" class="screen screen-home is-active">
-
-  <header class="top-bar">
-    <button class="back-btn" id="home-back" aria-label="Back" tabindex="-1">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11.5 3.5L5.5 9L11.5 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <h1 class="wordmark" id="home-title">Yuyeon Kim</h1>
-    <span class="top-bar-spacer"></span>
-  </header>
-
-  <div class="stage" id="stage">
-
-    <figure class="figure-wrap" id="figure-wrap" data-target="about" tabindex="0">
-      <img src="assets/human_figure_icon.png" alt="Yuyeon Kim illustration" class="figure-img" draggable="false">
-      <span class="icon-label">About&nbsp;Me</span>
-    </figure>
-
-    <button class="orbit-icon orbit-work" id="nav-work" data-target="work" aria-label="Go to Work">
-      <span class="icon-glow"></span>
-      <img src="assets/work_1_icon.png" alt="" draggable="false">
-      <span class="icon-label">Work</span>
-    </button>
-
-    <button class="orbit-icon orbit-work2" id="nav-work2" data-target="work2" aria-label="Go to Work 2">
-      <span class="icon-glow"></span>
-      <img src="assets/work_2_icon.png" alt="" draggable="false">
-      <span class="icon-label">Work 2</span>
-    </button>
-
-    <button class="orbit-icon orbit-contact" id="nav-contact" data-target="contact" aria-label="Go to Contact">
-      <span class="icon-glow"></span>
-      <img src="assets/contact_icon.png" alt="" draggable="false">
-      <span class="icon-label">Contact</span>
-    </button>
-
-  </div>
-
-  <p class="hint">tap an icon to explore</p>
-</section>
-
-<!-- ============ WORK (UX) LIST SCREEN ============ -->
-<section id="screen-work" class="screen">
-  <header class="top-bar">
-    <button class="back-btn" data-back aria-label="Back">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11.5 3.5L5.5 9L11.5 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
-    <span class="top-bar-spacer"></span>
-  </header>
-
-  <div class="page-body">
-    <p class="eyebrow">UX</p>
-    <div class="work-grid">
-      <button class="work-card" id="card-work1" data-target="work1">
-        <span class="work-card-thumb thumb-1"><img src="assets/work_1_icon.png" alt=""></span>
-        <span class="work-card-title">Work 1</span>
-      </button>
-      <button class="work-card work-card-ghost" tabindex="-1" aria-hidden="true"></button>
-      <button class="work-card work-card-ghost" tabindex="-1" aria-hidden="true"></button>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WORK 1 DETAIL SCREEN ============ -->
-<section id="screen-work1" class="screen">
-  <header class="top-bar">
-    <button class="back-btn" data-back-to="work" aria-label="Back">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11.5 3.5L5.5 9L11.5 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
-    <span class="top-bar-spacer"></span>
-  </header>
-
-  <div class="page-body">
-    <p class="eyebrow">Work 1</p>
-    <div class="detail-card">
-      <p>A short project summary goes here — the brief, the approach, and what shipped.</p>
-      <img src="assets/work_1_icon.png" alt="Work 1 visual" class="detail-img">
-      <p class="detail-caption">Add project images, mocks, or screenshots here.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MARKETING (WORK 2) DETAIL SCREEN ============ -->
-<section id="screen-marketing" class="screen">
-  <header class="top-bar">
-    <button class="back-btn" data-back-to="work" aria-label="Back">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11.5 3.5L5.5 9L11.5 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
-    <span class="top-bar-spacer"></span>
-  </header>
-
-  <div class="page-body">
-    <p class="eyebrow">Marketing</p>
-    <div class="marketing-grid">
-      <div class="marketing-tile">
-        <button class="work-card" id="card-work2" data-target="marketing">
-        <span class="work-card-thumb thumb-2"><img src="assets/work_2_icon.png" alt=""></span>
-        <span class="work-card-title">Work 2</span>
-       </button>
-      </div>
-      <div class="marketing-tile">
-        <span class="marketing-thumb thumb-2"></span>
-        <span class="marketing-lines"><span></span><span></span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ABOUT ME SCREEN ============ -->
-<section id="screen-about" class="screen">
-  <header class="top-bar">
-    <button class="back-btn" data-back aria-label="Back">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11.5 3.5L5.5 9L11.5 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
-    <span class="top-bar-spacer"></span>
-  </header>
-
-  <div class="page-body">
-    <div class="about-layout">
-      <div class="about-photo">
-        <img src="assets/human_figure_icon.png" alt="Yuyeon Kim">
-      </div>
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p class="about-tagline">Multimedia Designer | UX Designer, Media Marketer</p>
-        <p>I’m Yuyeon Jessica Kim, a Bachelor of Digital Media student at RMIT University specialising in UX design, multimedia, and digital marketing.</p>
-        <p>My work focuses on user centred design, crafting interaction concepts that prioritise clarity, usability, and engagement. Through my projects, I explore user journeys, test ideas, and refine outcomes based on feedback. Alongside this, I have experience in video editing, visual design, and content creation, and I am confident adapting to new tools and workflows.</p>
-        <p>I enjoy working hands on with technology, whether it is supporting users, troubleshooting issues, or assisting in live and interactive environments. My background in hospitality and retail has strengthened my communication skills, adaptability, and ability to respond to user needs in fast paced settings.</p>
-        <p>I am passionate about combining design, technology, and storytelling, particularly within multimedia and immersive experiences, and I am always looking for opportunities to grow through real world projects and collaborative environments.</p>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuyeon Kim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-pink"></span>
+      <span class="orb orb-green"></span>
+      <span class="orb orb-blue"></span>
     </div>
 
-    <div class="about-section">
-      <div class="section-block">
-        <h3 class="section-heading">Education</h3>
-        <p><strong>RMIT University</strong> — Bachelor of Digital Media (2024 - 2026)</p>
-        <ul class="education-list">
-          <li>Digital Media Studios / Specialisation / Subjects</li>
-          <li>Communication Media: Precision Writing [Elective]</li>
-          <li>Digital Media Design Internship — MooseToys</li>
-        </ul>
+    <!-- ============ HOME SCREEN ============ -->
+    <section id="screen-home" class="screen screen-home is-active">
+      <header class="top-bar">
+        <button class="back-btn" id="home-back" aria-label="Back" tabindex="-1">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M11.5 3.5L5.5 9L11.5 14.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="wordmark" id="home-title">Yuyeon Kim</h1>
+        <span class="top-bar-spacer"></span>
+      </header>
+
+      <div class="stage" id="stage">
+        <figure
+          class="figure-wrap"
+          id="figure-wrap"
+          data-target="about"
+          tabindex="0"
+        >
+          <img
+            src="assets/human_figure_icon.png"
+            alt="Yuyeon Kim illustration"
+            class="figure-img"
+            draggable="false"
+          />
+          <span class="icon-label">About&nbsp;Me</span>
+        </figure>
+
+        <button
+          class="orbit-icon orbit-work"
+          id="nav-work"
+          data-target="work"
+          aria-label="Go to Work"
+        >
+          <span class="icon-glow"></span>
+          <img src="assets/work_1_icon.png" alt="" draggable="false" />
+          <span class="icon-label">Work</span>
+        </button>
+
+        <button
+          class="orbit-icon orbit-work2"
+          id="nav-work2"
+          data-target="work2"
+          aria-label="Go to Work 2"
+        >
+          <span class="icon-glow"></span>
+          <img src="assets/work_2_icon.png" alt="" draggable="false" />
+          <span class="icon-label">Work 2</span>
+        </button>
+
+        <button
+          class="orbit-icon orbit-contact"
+          id="nav-contact"
+          data-target="contact"
+          aria-label="Go to Contact"
+        >
+          <span class="icon-glow"></span>
+          <img src="assets/contact_icon.png" alt="" draggable="false" />
+          <span class="icon-label">Contact</span>
+        </button>
       </div>
 
-      <div class="section-block">
-        <h3 class="section-heading">Certificates</h3>
-        <div class="certifications-list">
-          <div class="cert-item">
-            <p><strong>01. Strategic Content Marketing: Grow Your Reach on Social Media</strong></p>
-            <p class="cert-meta">LinkedIn Learning · Apr 2026</p>
+      <p class="hint">tap an icon to explore</p>
+    </section>
+
+    <!-- ============ WORK (UX) LIST SCREEN ============ -->
+    <section id="screen-work" class="screen">
+      <header class="top-bar">
+        <button class="back-btn" data-back aria-label="Back">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M11.5 3.5L5.5 9L11.5 14.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
+        <span class="top-bar-spacer"></span>
+      </header>
+
+      <div class="page-body">
+        <p class="eyebrow">UX</p>
+        <div class="work-grid">
+          <button class="work-card" id="card-work1" data-target="work1">
+            <span class="work-card-thumb thumb-1"
+              ><img src="assets/work_1_icon.png" alt=""
+            /></span>
+            <span class="work-card-title">Work 1</span>
+          </button>
+          <button
+            class="work-card work-card-ghost"
+            tabindex="-1"
+            aria-hidden="true"
+          ></button>
+          <button
+            class="work-card work-card-ghost"
+            tabindex="-1"
+            aria-hidden="true"
+          ></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK 1 DETAIL SCREEN ============ -->
+    <section id="screen-work1" class="screen">
+      <header class="top-bar">
+        <button class="back-btn" data-back-to="work" aria-label="Back">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M11.5 3.5L5.5 9L11.5 14.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
+        <span class="top-bar-spacer"></span>
+      </header>
+
+      <div class="page-body">
+        <p class="eyebrow">Work 1</p>
+        <div class="detail-card">
+          <p>
+            A short project summary goes here — the brief, the approach, and
+            what shipped.
+          </p>
+          <img
+            src="assets/work_1_icon.png"
+            alt="Work 1 visual"
+            class="detail-img"
+          />
+          <p class="detail-caption">
+            Add project images, mocks, or screenshots here.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARKETING (WORK 2) DETAIL SCREEN ============ -->
+    <section id="screen-marketing" class="screen">
+      <header class="top-bar">
+        <button class="back-btn" data-back-to="work" aria-label="Back">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M11.5 3.5L5.5 9L11.5 14.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
+        <span class="top-bar-spacer"></span>
+      </header>
+
+      <div class="page-body">
+        <p class="eyebrow">Marketing</p>
+        <div class="marketing-grid">
+          <div class="marketing-tile">
+            <button class="work-card" id="card-work2" data-target="marketing">
+              <span class="work-card-thumb thumb-2"
+                ><img src="assets/work_2_icon.png" alt=""
+              /></span>
+              <span class="work-card-title">Work 2</span>
+            </button>
           </div>
-          <div class="cert-item">
-            <p><strong>02. Marketing Foundations</strong></p>
-            <p class="cert-meta">LinkedIn Learning · Apr 2022</p>
-          </div>
-          <div class="cert-item">
-            <p><strong>03. Creative Effective Ads for Video Campaigns</strong></p>
-            <p class="cert-meta">Google Skillshop · Dec 2025</p>
-          </div>
-          <div class="cert-item">
-            <p><strong>04. Cert II Leadership</strong></p>
-            <p class="cert-meta">QCAA · 2022</p>
+          <div class="marketing-tile">
+            <span class="marketing-thumb thumb-2"></span>
+            <span class="marketing-lines"><span></span><span></span></span>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="section-block skills-row">
-        <div class="skills-list">
-          <p><strong>Soft Skills</strong></p>
-          <ul>
-            <li>Time management</li>
-            <li>Communication</li>
-            <li>Adaptability with tech</li>
-            <li>Attention to detail</li>
-            <li>Work ethic</li>
-            <li>Resilience</li>
-          </ul>
+    <!-- ============ ABOUT ME SCREEN ============ -->
+    <section id="screen-about" class="screen">
+      <header class="top-bar">
+        <button class="back-btn" data-back aria-label="Back">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M11.5 3.5L5.5 9L11.5 14.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
+        <span class="top-bar-spacer"></span>
+      </header>
+
+      <div class="page-body">
+        <div class="about-layout">
+          <div class="about-photo">
+            <div class="photo-slider" aria-label="About me slideshow">
+              <div class="photo-track">
+                <div class="photo-slide">
+                  <img src="assets/Yuyeon.png" alt="Yuyeon Kim" />
+                </div>
+                <div class="photo-slide">
+                  <img src="assets/Yuyeon.png" alt="Yuyeon Kim" />
+                </div>
+                <div class="photo-slide">
+                  <img src="assets/Yuyeon.png" alt="Yuyeon Kim" />
+                </div>
+                <div class="photo-slide">
+                  <img src="assets/Yuyeon.png" alt="Yuyeon Kim" />
+                </div>
+                <div class="photo-slide">
+                  <img src="assets/Yuyeon.png" alt="Yuyeon Kim" />
+                </div>
+                <div class="photo-slide">
+                  <img src="assets/Yuyeon.png" alt="Yuyeon Kim" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p class="about-tagline">
+              Multimedia Designer | UX Designer, Media Marketer
+            </p>
+            <p>
+              I’m Yuyeon Jessica Kim, a Bachelor of Digital Media student at
+              RMIT University specialising in UX design, multimedia, and digital
+              marketing.
+            </p>
+            <p>
+              My work focuses on user centred design, crafting interaction
+              concepts that prioritise clarity, usability, and engagement.
+              Through my projects, I explore user journeys, test ideas, and
+              refine outcomes based on feedback. Alongside this, I have
+              experience in video editing, visual design, and content creation,
+              and I am confident adapting to new tools and workflows.
+            </p>
+            <p>
+              I enjoy working hands on with technology, whether it is supporting
+              users, troubleshooting issues, or assisting in live and
+              interactive environments. My background in hospitality and retail
+              has strengthened my communication skills, adaptability, and
+              ability to respond to user needs in fast paced settings.
+            </p>
+            <p>
+              I am passionate about combining design, technology, and
+              storytelling, particularly within multimedia and immersive
+              experiences, and I am always looking for opportunities to grow
+              through real world projects and collaborative environments.
+            </p>
+          </div>
         </div>
-        <div class="skills-list">
-          <p><strong>Technical Skills</strong></p>
-          <ul>
-            <li>Figma</li>
-            <li>Adobe Creative Suite (Photoshop, Illustrator, Premiere Pro, XD)</li>
-            <li>Microsoft Office</li>
-            <li>Google Workspace</li>
-            <li>Social Media Platforms (Instagram, LinkedIn, Facebook, TikTok, X)</li>
-            <li>Basic HTML/CSS/JS (VSCode)</li>
-            <li>Capcut</li>
-            <li>Generative AI tools</li>
-            <li>Framer</li>
-            <li>Touch Designer</li>
-          </ul>
+
+        <div class="about-section">
+          <div class="section-block">
+            <h3 class="section-heading">Education</h3>
+            <p>
+              <strong>RMIT University</strong> — Bachelor of Digital Media (2024
+              - 2026)
+            </p>
+            <ul class="education-list">
+              <li>Digital Media Studios / Specialisation / Subjects</li>
+              <li>Communication Media: Precision Writing [Elective]</li>
+              <li>Digital Media Design Internship — MooseToys</li>
+            </ul>
+          </div>
+
+          <div class="section-block">
+            <h3 class="section-heading">Certificates</h3>
+            <div class="certifications-list">
+              <div class="cert-item">
+                <p>
+                  <strong
+                    >01. Strategic Content Marketing: Grow Your Reach on Social
+                    Media</strong
+                  >
+                </p>
+                <p class="cert-meta">LinkedIn Learning · Apr 2026</p>
+              </div>
+              <div class="cert-item">
+                <p><strong>02. Marketing Foundations</strong></p>
+                <p class="cert-meta">LinkedIn Learning · Apr 2022</p>
+              </div>
+              <div class="cert-item">
+                <p>
+                  <strong
+                    >03. Creative Effective Ads for Video Campaigns</strong
+                  >
+                </p>
+                <p class="cert-meta">Google Skillshop · Dec 2025</p>
+              </div>
+              <div class="cert-item">
+                <p><strong>04. Cert II Leadership</strong></p>
+                <p class="cert-meta">QCAA · 2022</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-block skills-row">
+            <div class="skills-list">
+              <p><strong>Soft Skills</strong></p>
+              <ul>
+                <li>Time management</li>
+                <li>Communication</li>
+                <li>Adaptability with tech</li>
+                <li>Attention to detail</li>
+                <li>Work ethic</li>
+                <li>Resilience</li>
+              </ul>
+            </div>
+            <div class="skills-list">
+              <p><strong>Technical Skills</strong></p>
+              <ul>
+                <li>Figma</li>
+                <li>
+                  Adobe Creative Suite (Photoshop, Illustrator, Premiere Pro,
+                  XD)
+                </li>
+                <li>Microsoft Office</li>
+                <li>Google Workspace</li>
+                <li>
+                  Social Media Platforms (Instagram, LinkedIn, Facebook, TikTok,
+                  X)
+                </li>
+                <li>Basic HTML/CSS/JS (VSCode)</li>
+                <li>Capcut</li>
+                <li>Generative AI tools</li>
+                <li>Framer</li>
+                <li>Touch Designer</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-block">
+            <h3 class="section-heading">Languages</h3>
+            <ul class="education-list">
+              <li>English (Native)</li>
+              <li>Korean (Native)</li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="section-block">
-        <h3 class="section-heading">Languages</h3>
-        <ul class="education-list">
-          <li>English (Native)</li>
-          <li>Korean (Native)</li>
-        </ul>
+    <!-- ============ CONTACT SCREEN ============ -->
+    <section id="screen-contact" class="screen">
+      <header class="top-bar">
+        <button class="back-btn" data-back aria-label="Back">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M11.5 3.5L5.5 9L11.5 14.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
+        <span class="top-bar-spacer"></span>
+      </header>
+
+      <div class="page-body">
+        <p class="eyebrow">Contact</p>
+        <div class="contact-list">
+          <a class="contact-row" href="mailto:yuyeonk226@gmail.com">
+            <span class="contact-row-label">Email</span>
+            <span class="contact-row-value">yuyeonk226@gmail.com</span>
+          </a>
+          <a class="contact-row" href="#" target="_blank" rel="noopener">
+            <span class="contact-row-label">LinkedIn</span>
+            <span class="contact-row-value">linkedin.com/in/yuyeonkim</span>
+          </a>
+          <a class="contact-row" href="tel:+61450030337">
+            <span class="contact-row-label">Phone</span>
+            <span class="contact-row-value">+61 450 030 337</span>
+          </a>
+          <div class="contact-row contact-row-static">
+            <span class="contact-row-label">Location</span>
+            <span class="contact-row-value"
+              >199 William Street, Melbourne, Australia</span
+            >
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ CONTACT SCREEN ============ -->
-<section id="screen-contact" class="screen">
-  <header class="top-bar">
-    <button class="back-btn" data-back aria-label="Back">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11.5 3.5L5.5 9L11.5 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <h1 class="wordmark" data-home-link>Yuyeon Kim</h1>
-    <span class="top-bar-spacer"></span>
-  </header>
+    <!-- transition overlay used for the zoom/fly-through effect -->
+    <div class="transition-veil" id="veil"></div>
 
-  <div class="page-body">
-    <p class="eyebrow">Contact</p>
-    <div class="contact-list">
-      <a class="contact-row" href="mailto:hello@yuyeonkim.com">
-        <span class="contact-row-label">Email</span>
-        <span class="contact-row-value">hello@yuyeonkim.com</span>
-      </a>
-      <a class="contact-row" href="#" target="_blank" rel="noopener">
-        <span class="contact-row-label">LinkedIn</span>
-        <span class="contact-row-value">linkedin.com/in/yuyeonkim</span>
-      </a>
-      <a class="contact-row" href="tel:+61000000000">
-        <span class="contact-row-label">Phone</span>
-        <span class="contact-row-value">+61 000 000 000</span>
-      </a>
-      <div class="contact-row contact-row-static">
-        <span class="contact-row-label">Location</span>
-        <span class="contact-row-value">Melbourne, Australia</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- transition overlay used for the zoom/fly-through effect -->
-<div class="transition-veil" id="veil"></div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
