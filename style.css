@@ -149,21 +149,21 @@ a {
 }
 
 /* ---------- top bar ---------- */
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 28px 24px 8px;
-  position: relative;
-  z-index: 5;
+.top-bar{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:28px 24px 8px;
+  position:relative;
+  z-index:5;
 }
-.wordmark {
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  cursor: pointer;
-  transition: opacity 0.2s;
+.wordmark{
+  font-size:1.15rem;
+  font-weight:600;
+  letter-spacing:.01em;
+  cursor:pointer;
+  transition:opacity .2s;
 }
 .wordmark:hover {
   opacity: 0.65;
@@ -440,24 +440,27 @@ a {
   box-shadow: none;
   cursor: default;
 }
+.project-image-wrapper,
 .work-card-thumb {
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0;
   width: 100%;
   height: 90px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  position: relative;
 }
 .thumb-1 {
-  background: linear-gradient(135deg, #e9fbd8, #c9f0a3);
+  background: none;
 }
 .thumb-2 {
   background: linear-gradient(135deg, #fbe6fb, #f0bdf0);
 }
+.project-image-wrapper img,
 .work-card-thumb img {
-  height: 64px;
-  width: auto;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 .work-card-title {
   font-family: "Space Grotesk", sans-serif;
