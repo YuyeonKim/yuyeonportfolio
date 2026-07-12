@@ -27,6 +27,11 @@
     return { x: `${x}px`, y: `${y}px` };
   }
 
+  function goHome(originEl) {
+    if (current === "home") return;
+    goTo("home", originEl);
+  }
+
   function goTo(targetKey, originEl) {
     if (isAnimating) return;
     const targetScreen = screenMap[targetKey];
@@ -45,6 +50,7 @@
 
     setTimeout(() => {
       currentScreen.classList.remove("is-active", "is-leaving");
+      targetScreen.style.display = "";
       targetScreen.classList.add("is-active");
       window.scrollTo({
         top: 0,
@@ -80,14 +86,14 @@
   document.querySelectorAll("[data-home-link]").forEach((el) => {
     el.addEventListener("click", (e) => {
       e.preventDefault();
-      goTo("home", el);
+      goHome(el);
     });
   });
 
   document.querySelectorAll("[data-back]").forEach((el) => {
     el.addEventListener("click", (e) => {
       e.preventDefault();
-      goTo("home", el);
+      goHome(el);
     });
   });
 
@@ -112,7 +118,7 @@
     screenMap[initialHash] !== screenMap.home
   ) {
     screenMap.home.classList.remove("is-active");
-    screenMap.home.style.display = "none";
+    screenMap.home.style.display = "";
     screenMap[initialHash].classList.add("is-active");
     current = initialHash;
   }

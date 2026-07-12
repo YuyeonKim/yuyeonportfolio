@@ -442,15 +442,17 @@ a {
 }
 .project-image-wrapper,
 .work-card-thumb {
+  display: block;
   border-radius: 16px;
   overflow: hidden;
   padding: 0;
   width: 100%;
   height: 90px;
   position: relative;
+  background: transparent;
 }
 .thumb-1 {
-  background: none;
+  background: transparent !important;
 }
 .thumb-2 {
   background: linear-gradient(135deg, #fbe6fb, #f0bdf0);
@@ -458,9 +460,12 @@ a {
 .project-image-wrapper img,
 .work-card-thumb img {
   width: 100%;
+  min-width: 100%;
   height: 100%;
+  min-height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
 }
 .work-card-title {
   font-family: "Space Grotesk", sans-serif;
@@ -483,12 +488,13 @@ a {
   margin: 0 0 18px;
 }
 .detail-img {
+  display: block;
   width: 100%;
-  max-height: 220px;
-  object-fit: contain;
+  height: 220px;
+  object-fit: cover;
   border-radius: 16px;
-  background: linear-gradient(135deg, #e9fbd8, #c9f0a3);
-  padding: 24px 0;
+  background: transparent;
+  padding: 0;
   margin-bottom: 14px;
 }
 .detail-caption {
